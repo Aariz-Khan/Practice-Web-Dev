@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html data-wf-domain="sip-project.webflow.io" data-wf-page="62d3db6e04d0a386245d6b08"
+    data-wf-site="62d3db6e04d0a360c05d6aff" data-wf-status="1">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Data Structures | Blog</title>
+    <meta
+        content="Learn about different data structures in python and get familiar with lists, tuples and dictionaries."
+        name="description" />
+    <meta content="Data Structures" property="og:title" />
+    <meta
+        content="Learn about different data structures in python and get familiar with lists, tuples and dictionaries."
+        property="og:description" />
+    <meta content="" property="og:image" />
+    <meta content="Data Structures" property="twitter:title" />
+    <meta
+        content="Learn about different data structures in python and get familiar with lists, tuples and dictionaries."
+        property="twitter:description" />
+    <meta content="" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="datastructures.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Domine:regular,700"] } });</script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navigation-bar w-nav">
+        <div class="w-container"><a href="#" class="site-name-link w-nav-brand">
+                <div class="site-name">LearnPy</div>
+            </a>
+            <nav role="navigation" class="navigation-menu w-nav-menu"><a href="/Files/index.html" class="nav-link w-nav-link">Home</a><a
+                    href="/Files/index.html" class="nav-link w-nav-link">All Posts</a></nav>
+            <div class="menu-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="w-container">
+            <div class="blog-body-wrapper">
+                <div class="post-title-section">
+                    <h1>Data Structures</h1>
+                    <div class="post-info-wrapper"><a href="#" class="post-info when-link w-dyn-bind-empty"></a></div>
+                </div>
+                <div class="body-copy w-richtext">
+                    <h2>3.1. More on Lists</h2>
+                    <p>The list data type has some more methods. Here are all of the methods of list objects:</p>
+                    <p>list.<strong>append</strong>(<em>x</em>)</p>
+                    <p>Add an item to the end of the list. Equivalent to a[len(a):] = [x].</p>
+                    <p>list.<strong>extend</strong>(<em>iterable</em>)</p>
+                    <p>Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] =
+                        iterable.</p>
+                    <p>list.<strong>insert</strong>(<em>i</em>, <em>x</em>)</p>
+                    <p>Insert an item at a given position. The first argument is the index of the element before which
+                        to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is
+                        equivalent to a.append(x).</p>
+                    <p>list.<strong>remove</strong>(<em>x</em>)</p>
+                    <p>Remove the first item from the list whose value is equal to <em>x</em>. It raises a <a
+                            href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a> if there
+                        is no such item.</p>
+                    <p>list.<strong>pop</strong>([<em>i</em>])</p>
+                    <p>Remove the item at the given position in the list, and return it. If no index is specified,
+                        a.pop() removes and returns the last item in the list. (The square brackets around the
+                        <em>i</em> in the method signature denote that the parameter is optional, not that you should
+                        type square brackets at that position. You will see this notation frequently in the Python
+                        Library Reference.)</p>
+                    <p>list.<strong>clear</strong>()</p>
+                    <p>Remove all items from the list. Equivalent to del a[:].</p>
+                    <p>list.<strong>index</strong>(<em>x</em>[, <em>start</em>[, <em>end</em>]])</p>
+                    <p>Return zero-based index in the list of the first item whose value is equal to <em>x</em>. Raises
+                        a <a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a> if there
+                        is no such item.</p>
+                    <p>The optional arguments <em>start</em> and <em>end</em> are interpreted as in the slice notation
+                        and are used to limit the search to a particular subsequence of the list. The returned index is
+                        computed relative to the beginning of the full sequence rather than the <em>start</em> argument.
+                    </p>
+                    <p>list.<strong>count</strong>(<em>x</em>)</p>
+                    <p>Return the number of times <em>x</em> appears in the list.</p>
+                    <p>list.<strong>sort</strong>(<em>*</em>, <em>key=None</em>, <em>reverse=False</em>)</p>
+                    <p>Sort the items of the list in place (the arguments can be used for sort customization, see <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> for their
+                        explanation).</p>
+                    <p>list.<strong>reverse</strong>()</p>
+                    <p>Reverse the elements of the list in place.</p>
+                    <p>list.<strong>copy</strong>()</p>
+                    <p>Return a shallow copy of the list. Equivalent to a[:].</p>
+                    <p>An example that uses most of the list methods:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>fruits = [&#x27;orange&#x27;, &#x27;apple&#x27;,
+                        &#x27;pear&#x27;, &#x27;banana&#x27;, &#x27;kiwi&#x27;, &#x27;apple&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.count(&#x27;apple&#x27;)<br />2<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.count(&#x27;tangerine&#x27;)<br />0<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.index(&#x27;banana&#x27;)<br />3<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.index(&#x27;banana&#x27;, 4)  <em># Find next banana starting a position
+                            4</em><br />6<br /><strong>&gt;&gt;&gt; </strong>fruits.reverse()<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;kiwi&#x27;,
+                        &#x27;banana&#x27;, &#x27;pear&#x27;, &#x27;apple&#x27;,
+                        &#x27;orange&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.append(&#x27;grape&#x27;)<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;kiwi&#x27;,
+                        &#x27;banana&#x27;, &#x27;pear&#x27;, &#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;grape&#x27;]<br /><strong>&gt;&gt;&gt; </strong>fruits.sort()<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;apple&#x27;, &#x27;apple&#x27;, &#x27;banana&#x27;,
+                        &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;kiwi&#x27;, &#x27;orange&#x27;,
+                        &#x27;pear&#x27;]<br /><strong>&gt;&gt;&gt; </strong>fruits.pop()<br />&#x27;pear&#x27;<br />
+                    </p>
+                    <p>You might have noticed that methods like insert, remove or sort that only modify the list have no
+                        return value printed – they return the default None. <a
+                            href="https://docs.python.org/3/tutorial/datastructures.html#id2">1</a> This is a design
+                        principle for all mutable data structures in Python.</p>
+                    <p>Another thing you might notice is that not all data can be sorted or compared. For instance,
+                        [None, &#x27;hello&#x27;, 10] doesn’t sort because integers can’t be compared to strings and
+                        <em>None</em> can’t be compared to other types. Also, there are some types that don’t have a
+                        defined ordering relation. For example, 3+4j &lt; 5+7j isn’t a valid comparison.</p>
+                    <h3>3.1.1. Using Lists as Stacks</h3>
+                    <p>The list methods make it very easy to use a list as a stack, where the last element added is the
+                        first element retrieved (“last-in, first-out”). To add an item to the top of the stack, use
+                        append(). To retrieve an item from the top of the stack, use pop() without an explicit index.
+                        For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>stack = [3, 4, 5]<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.append(6)<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.append(7)<br /><strong>&gt;&gt;&gt; </strong>stack<br />[3, 4, 5, 6,
+                        7]<br /><strong>&gt;&gt;&gt; </strong>stack.pop()<br />7<br /><strong>&gt;&gt;&gt;
+                        </strong>stack<br />[3, 4, 5, 6]<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.pop()<br />6<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.pop()<br />5<br /><strong>&gt;&gt;&gt; </strong>stack<br />[3, 4]<br /></p>
+                    <h3>3.1.2. Using Lists as Queues</h3>
+                    <p>It is also possible to use a list as a queue, where the first element added is the first element
+                        retrieved (“first-in, first-out”); however, lists are not efficient for this purpose. While
+                        appends and pops from the end of list are fast, doing inserts or pops from the beginning of a
+                        list is slow (because all of the other elements have to be shifted by one).</p>
+                    <p>To implement a queue, use <a
+                            href="https://docs.python.org/3/library/collections.html#collections.deque">collections.deque</a>
+                        which was designed to have fast appends and pops from both ends. For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; from</strong> <strong>collections</strong>
+                        <strong>import</strong> deque<br /><strong>&gt;&gt;&gt; </strong>queue =
+                        deque([&quot;Eric&quot;, &quot;John&quot;, &quot;Michael&quot;])<br /><strong>&gt;&gt;&gt;
+                        </strong>queue.append(&quot;Terry&quot;)           <em># Terry
+                            arrives</em><br /><strong>&gt;&gt;&gt; </strong>queue.append(&quot;Graham&quot;)        
+                         <em># Graham arrives</em><br /><strong>&gt;&gt;&gt; </strong>queue.popleft()                
+                        <em># The first to arrive now leaves</em><br />&#x27;Eric&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>queue.popleft()                 <em># The second to arrive now
+                            leaves</em><br />&#x27;John&#x27;<br /><strong>&gt;&gt;&gt; </strong>queue                  
+                                <em># Remaining queue in order of arrival</em><br />deque([&#x27;Michael&#x27;,
+                        &#x27;Terry&#x27;, &#x27;Graham&#x27;])<br /></p>
+                    <h3>3.1.3. List Comprehensions</h3>
+                    <p>List comprehensions provide a concise way to create lists. Common applications are to make new
+                        lists where each element is the result of some operations applied to each member of another
+                        sequence or iterable, or to create a subsequence of those elements that satisfy a certain
+                        condition.</p>
+                    <p>For example, assume we want to create a list of squares, like:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares = []<br /><strong>&gt;&gt;&gt; for</strong> x
+                        <strong>in</strong> range(10):<br /><strong>... </strong>  
+                         squares.append(x**2)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>squares<br />[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]<br /></p>
+                    <p>Note that this creates (or overwrites) a variable named x that still exists after the loop
+                        completes. We can calculate the list of squares without any side effects using:</p>
+                    <p>squares = list(map(<strong>lambda</strong> x: x**2, range(10)))<br /></p>
+                    <p>or, equivalently:</p>
+                    <p>squares = [x**2 <strong>for</strong> x <strong>in</strong> range(10)]<br /></p>
+                    <p>which is more concise and readable.</p>
+                    <p>A list comprehension consists of brackets containing an expression followed by a for clause, then
+                        zero or more for or if clauses. The result will be a new list resulting from evaluating the
+                        expression in the context of the for and if clauses which follow it. For example, this listcomp
+                        combines the elements of two lists if they are not equal:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>[(x, y) <strong>for</strong> x <strong>in</strong>
+                        [1,2,3] <strong>for</strong> y <strong>in</strong> [3,1,4] <strong>if</strong> x != y]<br />[(1,
+                        3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]<br /></p>
+                    <p>and it’s equivalent to:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>combs = []<br /><strong>&gt;&gt;&gt; for</strong> x
+                        <strong>in</strong> [1,2,3]:<br /><strong>... </strong>    <strong>for</strong> y
+                        <strong>in</strong> [3,1,4]:<br /><strong>... </strong>        <strong>if</strong> x !=
+                        y:<br /><strong>... </strong>            combs.append((x,
+                        y))<br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>combs<br />[(1, 3), (1, 4), (2,
+                        3), (2, 1), (2, 4), (3, 1), (3, 4)]<br /></p>
+                    <p>Note how the order of the <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#for">for</a> and <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#if">if</a> statements is the
+                        same in both these snippets.</p>
+                    <p>If the expression is a tuple (e.g. the (x, y) in the previous example), it must be parenthesized.
+                    </p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>vec = [-4, -2, 0, 2, 4]<br /><strong>&gt;&gt;&gt;
+                        </strong><em># create a new list with the values doubled</em><br /><strong>&gt;&gt;&gt;
+                        </strong>[x*2 <strong>for</strong> x <strong>in</strong> vec]<br />[-8, -4, 0, 4,
+                        8]<br /><strong>&gt;&gt;&gt; </strong><em># filter the list to exclude negative
+                            numbers</em><br /><strong>&gt;&gt;&gt; </strong>[x <strong>for</strong> x
+                        <strong>in</strong> vec <strong>if</strong> x &gt;= 0]<br />[0, 2, 4]<br /><strong>&gt;&gt;&gt;
+                        </strong><em># apply a function to all the elements</em><br /><strong>&gt;&gt;&gt;
+                        </strong>[abs(x) <strong>for</strong> x <strong>in</strong> vec]<br />[4, 2, 0, 2,
+                        4]<br /><strong>&gt;&gt;&gt; </strong><em># call a method on each
+                            element</em><br /><strong>&gt;&gt;&gt; </strong>freshfruit = [&#x27;  banana&#x27;, &#x27;
+                         loganberry &#x27;, &#x27;passion fruit  &#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>[weapon.strip() <strong>for</strong> weapon <strong>in</strong>
+                        freshfruit]<br />[&#x27;banana&#x27;, &#x27;loganberry&#x27;, &#x27;passion
+                        fruit&#x27;]<br /><strong>&gt;&gt;&gt; </strong><em># create a list of 2-tuples like (number,
+                            square)</em><br /><strong>&gt;&gt;&gt; </strong>[(x, x**2) <strong>for</strong> x
+                        <strong>in</strong> range(6)]<br />[(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5,
+                        25)]<br /><strong>&gt;&gt;&gt; </strong><em># the tuple must be parenthesized, otherwise an
+                            error is raised</em><br /><strong>&gt;&gt;&gt; </strong>[x, x**2 <strong>for</strong> x
+                        <strong>in</strong> range(6)]<br />  File &quot;&lt;stdin&gt;&quot;, line 1<br />    [x, x**2
+                        <strong>for</strong> x <strong>in</strong> range(6)]<br />     ^^^^^^^<br />SyntaxError: did you
+                        forget parentheses around the comprehension target?<br /><strong>&gt;&gt;&gt; </strong><em>#
+                            flatten a list using a listcomp with two &#x27;for&#x27;</em><br /><strong>&gt;&gt;&gt;
+                        </strong>vec = [[1,2,3], [4,5,6], [7,8,9]]<br /><strong>&gt;&gt;&gt; </strong>[num
+                        <strong>for</strong> elem <strong>in</strong> vec <strong>for</strong> num <strong>in</strong>
+                        elem]<br />[1, 2, 3, 4, 5, 6, 7, 8, 9]<br /></p>
+                    <p>List comprehensions can contain complex expressions and nested functions:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; from</strong> <strong>math</strong> <strong>import</strong>
+                        pi<br /><strong>&gt;&gt;&gt; </strong>[str(round(pi, i)) <strong>for</strong> i
+                        <strong>in</strong> range(1, 6)]<br />[&#x27;3.1&#x27;, &#x27;3.14&#x27;, &#x27;3.142&#x27;,
+                        &#x27;3.1416&#x27;, &#x27;3.14159&#x27;]<br /></p>
+                    <h3>3.1.4. Nested List Comprehensions</h3>
+                    <p>The initial expression in a list comprehension can be any arbitrary expression, including another
+                        list comprehension.</p>
+                    <p>Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>matrix = [<br /><strong>... </strong>    [1, 2, 3,
+                        4],<br /><strong>... </strong>    [5, 6, 7, 8],<br /><strong>... </strong>    [9, 10, 11,
+                        12],<br /><strong>... </strong>]<br /></p>
+                    <p>The following list comprehension will transpose rows and columns:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>[[row[i] <strong>for</strong> row <strong>in</strong>
+                        matrix] <strong>for</strong> i <strong>in</strong> range(4)]<br />[[1, 5, 9], [2, 6, 10], [3, 7,
+                        11], [4, 8, 12]]<br /></p>
+                    <p>As we saw in the previous section, the nested listcomp is evaluated in the context of the <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#for">for</a> that follows it,
+                        so this example is equivalent to:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>transposed = []<br /><strong>&gt;&gt;&gt; for</strong>
+                        i <strong>in</strong> range(4):<br /><strong>... </strong>    transposed.append([row[i]
+                        <strong>for</strong> row <strong>in</strong>
+                        matrix])<br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>transposed<br />[[1, 5,
+                        9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]<br /></p>
+                    <p>which, in turn, is the same as:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>transposed = []<br /><strong>&gt;&gt;&gt; for</strong>
+                        i <strong>in</strong> range(4):<br /><strong>... </strong>    <em># the following 3 lines
+                            implement the nested listcomp</em><br /><strong>... </strong>    transposed_row =
+                        []<br /><strong>... </strong>    <strong>for</strong> row <strong>in</strong>
+                        matrix:<br /><strong>... </strong>        transposed_row.append(row[i])<br /><strong>...
+                        </strong>  
+                         transposed.append(transposed_row)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>transposed<br />[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]<br /></p>
+                    <p>In the real world, you should prefer built-in functions to complex flow statements. The <a
+                            href="https://docs.python.org/3/library/functions.html#zip">zip()</a> function would do a
+                        great job for this use case:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>list(zip(*matrix))<br />[(1, 5, 9), (2, 6, 10), (3, 7,
+                        11), (4, 8, 12)]<br /></p>
+                    <p>See <a
+                            href="https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments">Unpacking
+                            Argument Lists</a> for details on the asterisk in this line.</p>
+                    <h2>3.2. The del statement</h2>
+                    <p>There is a way to remove an item from a list given its index instead of its value: the <a
+                            href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> statement. This
+                        differs from the pop() method which returns a value. The del statement can also be used to
+                        remove slices from a list or clear the entire list (which we did earlier by assignment of an
+                        empty list to the slice). For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a = [-1, 1, 66.25, 333, 333,
+                        1234.5]<br /><strong>&gt;&gt;&gt; del</strong> a[0]<br /><strong>&gt;&gt;&gt;
+                        </strong>a<br />[1, 66.25, 333, 333, 1234.5]<br /><strong>&gt;&gt;&gt; del</strong>
+                        a[2:4]<br /><strong>&gt;&gt;&gt; </strong>a<br />[1, 66.25, 1234.5]<br /><strong>&gt;&gt;&gt;
+                            del</strong> a[:]<br /><strong>&gt;&gt;&gt; </strong>a<br />[]<br /></p>
+                    <p><a href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> can also be used to
+                        delete entire variables:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; del</strong> a<br /></p>
+                    <p>Referencing the name a hereafter is an error (at least until another value is assigned to it).
+                        We’ll find other uses for <a
+                            href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> later.</p>
+                    <h2>3.3. Tuples and Sequences</h2>
+                    <p>We saw that lists and strings have many common properties, such as indexing and slicing
+                        operations. They are two examples of <em>sequence</em> data types (see <a
+                            href="https://docs.python.org/3/library/stdtypes.html#typesseq">Sequence Types — list,
+                            tuple, range</a>). Since Python is an evolving language, other sequence data types may be
+                        added. There is also another standard sequence data type: the <em>tuple</em>.</p>
+                    <p>A tuple consists of a number of values separated by commas, for instance:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>t = 12345, 54321,
+                        &#x27;hello!&#x27;<br /><strong>&gt;&gt;&gt; </strong>t[0]<br />12345<br /><strong>&gt;&gt;&gt;
+                        </strong>t<br />(12345, 54321, &#x27;hello!&#x27;)<br /><strong>&gt;&gt;&gt; </strong><em>#
+                            Tuples may be nested:</em><br /><strong>... </strong>u = t, (1, 2, 3, 4,
+                        5)<br /><strong>&gt;&gt;&gt; </strong>u<br />((12345, 54321, &#x27;hello!&#x27;), (1, 2, 3, 4,
+                        5))<br /><strong>&gt;&gt;&gt; </strong><em># Tuples are immutable:</em><br /><strong>...
+                        </strong>t[0] = 88888<br />Traceback (most recent call last):<br />  File
+                        &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;<br />TypeError: &#x27;tuple&#x27; object
+                        does not support item assignment<br /><strong>&gt;&gt;&gt; </strong><em># but they can contain
+                            mutable objects:</em><br /><strong>... </strong>v = ([1, 2, 3], [3, 2,
+                        1])<br /><strong>&gt;&gt;&gt; </strong>v<br />([1, 2, 3], [3, 2, 1])<br /></p>
+                    <p>As you see, on output tuples are always enclosed in parentheses, so that nested tuples are
+                        interpreted correctly; they may be input with or without surrounding parentheses, although often
+                        parentheses are necessary anyway (if the tuple is part of a larger expression). It is not
+                        possible to assign to the individual items of a tuple, however it is possible to create tuples
+                        which contain mutable objects, such as lists.</p>
+                    <p>Though tuples may seem similar to lists, they are often used in different situations and for
+                        different purposes. Tuples are <a
+                            href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>, and usually
+                        contain a heterogeneous sequence of elements that are accessed via unpacking (see later in this
+                        section) or indexing (or even by attribute in the case of <a
+                            href="https://docs.python.org/3/library/collections.html#collections.namedtuple">namedtuples</a>).
+                        Lists are <a href="https://docs.python.org/3/glossary.html#term-mutable">mutable</a>, and their
+                        elements are usually homogeneous and are accessed by iterating over the list.</p>
+                    <p>A special problem is the construction of tuples containing 0 or 1 items: the syntax has some
+                        extra quirks to accommodate these. Empty tuples are constructed by an empty pair of parentheses;
+                        a tuple with one item is constructed by following a value with a comma (it is not sufficient to
+                        enclose a single value in parentheses). Ugly, but effective. For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>empty = ()<br /><strong>&gt;&gt;&gt; </strong>singleton
+                        = &#x27;hello&#x27;,    <em># &lt;-- note trailing comma</em><br /><strong>&gt;&gt;&gt;
+                        </strong>len(empty)<br />0<br /><strong>&gt;&gt;&gt;
+                        </strong>len(singleton)<br />1<br /><strong>&gt;&gt;&gt;
+                        </strong>singleton<br />(&#x27;hello&#x27;,)<br /></p>
+                    <p>The statement t = 12345, 54321, &#x27;hello!&#x27; is an example of <em>tuple packing</em>: the
+                        values 12345, 54321 and &#x27;hello!&#x27; are packed together in a tuple. The reverse operation
+                        is also possible:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>x, y, z = t<br /></p>
+                    <p>This is called, appropriately enough, <em>sequence unpacking</em> and works for any sequence on
+                        the right-hand side. Sequence unpacking requires that there are as many variables on the left
+                        side of the equals sign as there are elements in the sequence. Note that multiple assignment is
+                        really just a combination of tuple packing and sequence unpacking.</p>
+                    <h2>3.4. Sets</h2>
+                    <p>Python also includes a data type for <em>sets</em>. A set is an unordered collection with no
+                        duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set
+                        objects also support mathematical operations like union, intersection, difference, and symmetric
+                        difference.</p>
+                    <p>Curly braces or the <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a>
+                        function can be used to create sets. Note: to create an empty set you have to use set(), not {};
+                        the latter creates an empty dictionary, a data structure that we discuss in the next section.
+                    </p>
+                    <p>Here is a brief demonstration:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = {&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;}<br /><strong>&gt;&gt;&gt; </strong>print(basket)                      <em>#
+                            show that duplicates have been removed</em><br />{&#x27;orange&#x27;, &#x27;banana&#x27;,
+                        &#x27;pear&#x27;, &#x27;apple&#x27;}<br /><strong>&gt;&gt;&gt; </strong>&#x27;orange&#x27;
+                        <strong>in</strong> basket                 <em># fast membership
+                            testing</em><br />True<br /><strong>&gt;&gt;&gt; </strong>&#x27;crabgrass&#x27;
+                        <strong>in</strong> basket<br />False<br /><br /><strong>&gt;&gt;&gt; </strong><em># Demonstrate
+                            set operations on unique letters from two
+                            words</em><br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>a =
+                        set(&#x27;abracadabra&#x27;)<br /><strong>&gt;&gt;&gt; </strong>b =
+                        set(&#x27;alacazam&#x27;)<br /><strong>&gt;&gt;&gt; </strong>a                                
+                         <em># unique letters in a</em><br />{&#x27;a&#x27;, &#x27;r&#x27;, &#x27;b&#x27;,
+                        &#x27;c&#x27;, &#x27;d&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a - b                          
+                           <em># letters in a but not in b</em><br />{&#x27;r&#x27;, &#x27;d&#x27;,
+                        &#x27;b&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a | b                              <em>#
+                            letters in a or b or both</em><br />{&#x27;a&#x27;, &#x27;c&#x27;, &#x27;r&#x27;,
+                        &#x27;d&#x27;, &#x27;b&#x27;, &#x27;m&#x27;, &#x27;z&#x27;,
+                        &#x27;l&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a &amp; b                              <em>#
+                            letters in both a and b</em><br />{&#x27;a&#x27;, &#x27;c&#x27;}<br /><strong>&gt;&gt;&gt;
+                        </strong>a ^ b                              <em># letters in a or b but not
+                            both</em><br />{&#x27;r&#x27;, &#x27;d&#x27;, &#x27;b&#x27;, &#x27;m&#x27;, &#x27;z&#x27;,
+                        &#x27;l&#x27;}<br /></p>
+                    <p>Similarly to <a href="https://docs.python.org/3/tutorial/datastructures.html#tut-listcomps">list
+                            comprehensions</a>, set comprehensions are also supported:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a = {x <strong>for</strong> x <strong>in</strong>
+                        &#x27;abracadabra&#x27; <strong>if</strong> x <strong>not</strong> <strong>in</strong>
+                        &#x27;abc&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a<br />{&#x27;r&#x27;, &#x27;d&#x27;}<br />
+                    </p>
+                    <h2>3.5. Dictionaries</h2>
+                    <p>Another useful data type built into Python is the <em>dictionary</em> (see <a
+                            href="https://docs.python.org/3/library/stdtypes.html#typesmapping">Mapping Types —
+                            dict</a>). Dictionaries are sometimes found in other languages as “associative memories” or
+                        “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries
+                        are indexed by <em>keys</em>, which can be any immutable type; strings and numbers can always be
+                        keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple
+                        contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t
+                        use lists as keys, since lists can be modified in place using index assignments, slice
+                        assignments, or methods like append() and extend().</p>
+                    <p>It is best to think of a dictionary as a set of <em>key: value</em> pairs, with the requirement
+                        that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary:
+                        {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value
+                        pairs to the dictionary; this is also the way dictionaries are written on output.</p>
+                    <p>The main operations on a dictionary are storing a value with some key and extracting the value
+                        given the key. It is also possible to delete a key:value pair with del. If you store using a key
+                        that is already in use, the old value associated with that key is forgotten. It is an error to
+                        extract a value using a non-existent key.</p>
+                    <p>Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in
+                        insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single
+                        key is in the dictionary, use the <a
+                            href="https://docs.python.org/3/reference/expressions.html#in">in</a> keyword.</p>
+                    <p>Here is a small example using a dictionary:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>tel = {&#x27;jack&#x27;: 4098, &#x27;sape&#x27;:
+                        4139}<br /><strong>&gt;&gt;&gt; </strong>tel[&#x27;guido&#x27;] = 4127<br /><strong>&gt;&gt;&gt;
+                        </strong>tel<br />{&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139, &#x27;guido&#x27;:
+                        4127}<br /><strong>&gt;&gt;&gt;
+                        </strong>tel[&#x27;jack&#x27;]<br />4098<br /><strong>&gt;&gt;&gt; del</strong>
+                        tel[&#x27;sape&#x27;]<br /><strong>&gt;&gt;&gt; </strong>tel[&#x27;irv&#x27;] =
+                        4127<br /><strong>&gt;&gt;&gt; </strong>tel<br />{&#x27;jack&#x27;: 4098, &#x27;guido&#x27;:
+                        4127, &#x27;irv&#x27;: 4127}<br /><strong>&gt;&gt;&gt;
+                        </strong>list(tel)<br />[&#x27;jack&#x27;, &#x27;guido&#x27;,
+                        &#x27;irv&#x27;]<br /><strong>&gt;&gt;&gt; </strong>sorted(tel)<br />[&#x27;guido&#x27;,
+                        &#x27;irv&#x27;, &#x27;jack&#x27;]<br /><strong>&gt;&gt;&gt; </strong>&#x27;guido&#x27;
+                        <strong>in</strong> tel<br />True<br /><strong>&gt;&gt;&gt; </strong>&#x27;jack&#x27;
+                        <strong>not</strong> <strong>in</strong> tel<br />False<br /></p>
+                    <p>The <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict()</a> constructor builds
+                        dictionaries directly from sequences of key-value pairs:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>dict([(&#x27;sape&#x27;, 4139), (&#x27;guido&#x27;,
+                        4127), (&#x27;jack&#x27;, 4098)])<br />{&#x27;sape&#x27;: 4139, &#x27;guido&#x27;: 4127,
+                        &#x27;jack&#x27;: 4098}<br /></p>
+                    <p>In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value
+                        expressions:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>{x: x**2 <strong>for</strong> x <strong>in</strong> (2,
+                        4, 6)}<br />{2: 4, 4: 16, 6: 36}<br /></p>
+                    <p>When the keys are simple strings, it is sometimes easier to specify pairs using keyword
+                        arguments:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>dict(sape=4139, guido=4127,
+                        jack=4098)<br />{&#x27;sape&#x27;: 4139, &#x27;guido&#x27;: 4127, &#x27;jack&#x27;: 4098}<br />
+                    </p>
+                    <h2>3.6. Looping Techniques</h2>
+                    <p>When looping through dictionaries, the key and corresponding value can be retrieved at the same
+                        time using the items() method.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>knights = {&#x27;gallahad&#x27;: &#x27;the pure&#x27;,
+                        &#x27;robin&#x27;: &#x27;the brave&#x27;}<br /><strong>&gt;&gt;&gt; for</strong> k, v
+                        <strong>in</strong> knights.items():<br /><strong>... </strong>    print(k,
+                        v)<br /><strong>...</strong><br />gallahad the pure<br />robin the brave<br /></p>
+                    <p>When looping through a sequence, the position index and corresponding value can be retrieved at
+                        the same time using the <a
+                            href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> function.
+                    </p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; for</strong> i, v <strong>in</strong>
+                        enumerate([&#x27;tic&#x27;, &#x27;tac&#x27;, &#x27;toe&#x27;]):<br /><strong>... </strong>  
+                         print(i, v)<br /><strong>...</strong><br />0 tic<br />1 tac<br />2 toe<br /></p>
+                    <p>To loop over two or more sequences at the same time, the entries can be paired with the <a
+                            href="https://docs.python.org/3/library/functions.html#zip">zip()</a> function.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>questions = [&#x27;name&#x27;, &#x27;quest&#x27;,
+                        &#x27;favorite color&#x27;]<br /><strong>&gt;&gt;&gt; </strong>answers = [&#x27;lancelot&#x27;,
+                        &#x27;the holy grail&#x27;, &#x27;blue&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> q, a
+                        <strong>in</strong> zip(questions, answers):<br /><strong>... </strong>    print(&#x27;What is
+                        your <strong>{0}</strong>?  It is <strong>{1}</strong>.&#x27;.format(q,
+                        a))<br /><strong>...</strong><br />What is your name?  It is lancelot.<br />What is your quest?
+                         It is the holy grail.<br />What is your favorite color?  It is blue.<br /></p>
+                    <p>To loop over a sequence in reverse, first specify the sequence in a forward direction and then
+                        call the <a href="https://docs.python.org/3/library/functions.html#reversed">reversed()</a>
+                        function.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; for</strong> i <strong>in</strong> reversed(range(1, 10,
+                        2)):<br /><strong>... </strong>  
+                         print(i)<br /><strong>...</strong><br />9<br />7<br />5<br />3<br />1<br /></p>
+                    <p>To loop over a sequence in sorted order, use the <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> function which
+                        returns a new sorted list while leaving the source unaltered.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = [&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> i <strong>in</strong>
+                        sorted(basket):<br /><strong>... </strong>  
+                         print(i)<br /><strong>...</strong><br />apple<br />apple<br />banana<br />orange<br />orange<br />pear<br />
+                    </p>
+                    <p>Using <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a> on a sequence
+                        eliminates duplicate elements. The use of <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> in combination
+                        with <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a> over a sequence is
+                        an idiomatic way to loop over unique elements of the sequence in sorted order.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = [&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> f <strong>in</strong>
+                        sorted(set(basket)):<br /><strong>... </strong>  
+                         print(f)<br /><strong>...</strong><br />apple<br />banana<br />orange<br />pear<br /></p>
+                    <p>It is sometimes tempting to change a list while you are looping over it; however, it is often
+                        simpler and safer to create a new list instead.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; import</strong> <strong>math</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>raw_data = [56.2, float(&#x27;NaN&#x27;), 51.7, 55.3, 52.5, float(&#x27;NaN&#x27;),
+                        47.8]<br /><strong>&gt;&gt;&gt; </strong>filtered_data = []<br /><strong>&gt;&gt;&gt;
+                            for</strong> value <strong>in</strong> raw_data:<br /><strong>... </strong>  
+                         <strong>if</strong> <strong>not</strong> math.isnan(value):<br /><strong>... </strong>      
+                         filtered_data.append(value)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>filtered_data<br />[56.2, 51.7, 55.3, 52.5, 47.8]<br /></p>
+                    <h2>3.7. More on Conditions</h2>
+                    <p>The conditions used in while and if statements can contain any operators, not just comparisons.
+                    </p>
+                    <p>The comparison operators in and not in are membership tests that determine whether a value is in
+                        (or not in) a container. The operators is and is not compare whether two objects are really the
+                        same object. All comparison operators have the same priority, which is lower than that of all
+                        numerical operators.</p>
+                    <p>Comparisons can be chained. For example, a &lt; b == c tests whether a is less than b and
+                        moreover b equals c.</p>
+                    <p>Comparisons may be combined using the Boolean operators and and or, and the outcome of a
+                        comparison (or of any other Boolean expression) may be negated with not. These have lower
+                        priorities than comparison operators; between them, not has the highest priority and or the
+                        lowest, so that A and not B or C is equivalent to (A and (not B)) or C. As always, parentheses
+                        can be used to express the desired composition.</p>
+                    <p>The Boolean operators and and or are so-called <em>short-circuit</em> operators: their arguments
+                        are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For
+                        example, if A and C are true but B is false, A and B and C does not evaluate the expression C.
+                        When used as a general value and not as a Boolean, the return value of a short-circuit operator
+                        is the last evaluated argument.</p>
+                    <p>It is possible to assign the result of a comparison or other Boolean expression to a variable.
+                        For example,</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>string1, string2, string3 = &#x27;&#x27;,
+                        &#x27;Trondheim&#x27;, &#x27;Hammer Dance&#x27;<br /><strong>&gt;&gt;&gt; </strong>non_null =
+                        string1 <strong>or</strong> string2 <strong>or</strong> string3<br /><strong>&gt;&gt;&gt;
+                        </strong>non_null<br />&#x27;Trondheim&#x27;<br /></p>
+                    <p>Note that in Python, unlike C, assignment inside expressions must be done explicitly with the <a
+                            href="https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression">walrus
+                            operator</a> :=. This avoids a common class of problems encountered in C programs: typing =
+                        in an expression when == was intended.</p>
+                    <h2>3.8. Comparing Sequences and Other Types</h2>
+                    <p>Sequence objects typically may be compared to other objects with the same sequence type. The
+                        comparison uses <em>lexicographical</em> ordering: first the first two items are compared, and
+                        if they differ this determines the outcome of the comparison; if they are equal, the next two
+                        items are compared, and so on, until either sequence is exhausted. If two items to be compared
+                        are themselves sequences of the same type, the lexicographical comparison is carried out
+                        recursively. If all items of two sequences compare equal, the sequences are considered equal. If
+                        one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller
+                        (lesser) one. Lexicographical ordering for strings uses the Unicode code point number to order
+                        individual characters. Some examples of comparisons between sequences of the same type:</p>
+                    <p>(1, 2, 3)              &lt; (1, 2, 4)<br />[1, 2, 3]              &lt; [1, 2,
+                        4]<br />&#x27;ABC&#x27; &lt; &#x27;C&#x27; &lt; &#x27;Pascal&#x27; &lt;
+                        &#x27;Python&#x27;<br />(1, 2, 3, 4)           &lt; (1, 2, 4)<br />(1, 2)                 &lt;
+                        (1, 2, -1)<br />(1, 2, 3)             == (1.0, 2.0, 3.0)<br />(1, 2, (&#x27;aa&#x27;,
+                        &#x27;ab&#x27;))   &lt; (1, 2, (&#x27;abc&#x27;, &#x27;a&#x27;), 4)<br /></p>
+                    <p>Note that comparing objects of different types with &lt; or &gt; is legal provided that the
+                        objects have appropriate comparison methods. For example, mixed numeric types are compared
+                        according to their numeric value, so 0 equals 0.0, etc. Otherwise, rather than providing an
+                        arbitrary ordering, the interpreter will raise a <a
+                            href="https://docs.python.org/3/library/exceptions.html#TypeError">TypeError</a> exception.
+                    </p>
+                    
+                    <h3>Accord3.1. More on Lists</h3>
+                    <p>The list data type has some more methods. Here are all of the methods of list objects:</p>
+                    <h3>list.<strong>append</strong>(<em>x</em>)</h3>
+                    <p>Add an item to the end of the list. Equivalent to a[len(a):] = [x].</p>
+                    <h3>list.<strong>extend</strong>(<em>iterable</em>)</h3>
+                    <p>Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] =
+                        iterable.</p>
+                    <h3>list.<strong>insert</strong>(<em>i</em>, <em>x</em>)</h3>
+                    <p>Insert an item at a given position. The first argument is the index of the element before which
+                        to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is
+                        equivalent to a.append(x).</p>
+                    <h3>list.<strong>remove</strong>(<em>x</em>)</h3>
+                    <p>Remove the first item from the list whose value is equal to <em>x</em>. It raises a <a
+                            href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a> if there
+                        is no such item.</p>
+                    <h3>list.<strong>pop</strong>([<em>i</em>])</h3>
+                    <p>Remove the item at the given position in the list, and return it. If no index is specified,
+                        a.pop() removes and returns the last item in the list. (The square brackets around the
+                        <em>i</em> in the method signature denote that the parameter is optional, not that you should
+                        type square brackets at that position. You will see this notation frequently in the Python
+                        Library Reference.)</p>
+                    <h3>list.<strong>clear</strong>()</h3>
+                    <p>Remove all items from the list. Equivalent to del a[:].</p>
+                    <h3>list.<strong>index</strong>(<em>x</em>[, <em>start</em>[, <em>end</em>]])</h3>
+                    <p>Return zero-based index in the list of the first item whose value is equal to <em>x</em>. Raises
+                        a <a href="https://docs.python.org/3/library/exceptions.html#ValueError">ValueError</a> if there
+                        is no such item.</p>
+                    <p>The optional arguments <em>start</em> and <em>end</em> are interpreted as in the slice notation
+                        and are used to limit the search to a particular subsequence of the list. The returned index is
+                        computed relative to the beginning of the full sequence rather than the <em>start</em> argument.
+                    </p>
+                    <h3>list.<strong>count</strong>(<em>x</em>)</h3>
+                    <p>Return the number of times <em>x</em> appears in the list.</p>
+                    <h3>list.<strong>sort</strong>(<em>*</em>, <em>key=None</em>, <em>reverse=False</em>)</h3>
+                    <p>Sort the items of the list in place (the arguments can be used for sort customization, see <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> for their
+                        explanation).</p>
+                    <h3>list.<strong>reverse</strong>()</h3>
+                    <p>Reverse the elements of the list in place.</p>
+                    <h3>list.<strong>copy</strong>()</h3>
+                    <p>Return a shallow copy of the list. Equivalent to a[:].</p>
+                    <p>An example that uses most of the list methods:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>fruits = [&#x27;orange&#x27;, &#x27;apple&#x27;,
+                        &#x27;pear&#x27;, &#x27;banana&#x27;, &#x27;kiwi&#x27;, &#x27;apple&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.count(&#x27;apple&#x27;)<br />2<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.count(&#x27;tangerine&#x27;)<br />0<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.index(&#x27;banana&#x27;)<br />3<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.index(&#x27;banana&#x27;, 4)  <em># Find next banana starting a position
+                            4</em><br />6<br /><strong>&gt;&gt;&gt; </strong>fruits.reverse()<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;kiwi&#x27;,
+                        &#x27;banana&#x27;, &#x27;pear&#x27;, &#x27;apple&#x27;,
+                        &#x27;orange&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits.append(&#x27;grape&#x27;)<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;kiwi&#x27;,
+                        &#x27;banana&#x27;, &#x27;pear&#x27;, &#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;grape&#x27;]<br /><strong>&gt;&gt;&gt; </strong>fruits.sort()<br /><strong>&gt;&gt;&gt;
+                        </strong>fruits<br />[&#x27;apple&#x27;, &#x27;apple&#x27;, &#x27;banana&#x27;,
+                        &#x27;banana&#x27;, &#x27;grape&#x27;, &#x27;kiwi&#x27;, &#x27;orange&#x27;,
+                        &#x27;pear&#x27;]<br /><strong>&gt;&gt;&gt; </strong>fruits.pop()<br />&#x27;pear&#x27;<br />
+                    </p>
+                    <p>You might have noticed that methods like insert, remove or sort that only modify the list have no
+                        return value printed – they return the default None. <a
+                            href="https://docs.python.org/3/tutorial/datastructures.html#id2">1</a> This is a design
+                        principle for all mutable data structures in Python.</p>
+                    <p>Another thing you might notice is that not all data can be sorted or compared. For instance,
+                        [None, &#x27;hello&#x27;, 10] doesn’t sort because integers can’t be compared to strings and
+                        <em>None</em> can’t be compared to other types. Also, there are some types that don’t have a
+                        defined ordering relation. For example, 3+4j &lt; 5+7j isn’t a valid comparison.</p>
+                    <h3>3.1.1. Using Lists as Stacks</h3>
+                    <p>The list methods make it very easy to use a list as a stack, where the last element added is the
+                        first element retrieved (“last-in, first-out”). To add an item to the top of the stack, use
+                        append(). To retrieve an item from the top of the stack, use pop() without an explicit index.
+                        For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>stack = [3, 4, 5]<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.append(6)<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.append(7)<br /><strong>&gt;&gt;&gt; </strong>stack<br />[3, 4, 5, 6,
+                        7]<br /><strong>&gt;&gt;&gt; </strong>stack.pop()<br />7<br /><strong>&gt;&gt;&gt;
+                        </strong>stack<br />[3, 4, 5, 6]<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.pop()<br />6<br /><strong>&gt;&gt;&gt;
+                        </strong>stack.pop()<br />5<br /><strong>&gt;&gt;&gt; </strong>stack<br />[3, 4]<br /></p>
+                    <h3>3.1.2. Using Lists as Queues</h3>
+                    <p>It is also possible to use a list as a queue, where the first element added is the first element
+                        retrieved (“first-in, first-out”); however, lists are not efficient for this purpose. While
+                        appends and pops from the end of list are fast, doing inserts or pops from the beginning of a
+                        list is slow (because all of the other elements have to be shifted by one).</p>
+                    <p>To implement a queue, use <a
+                            href="https://docs.python.org/3/library/collections.html#collections.deque">collections.deque</a>
+                        which was designed to have fast appends and pops from both ends. For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; from</strong> <strong>collections</strong>
+                        <strong>import</strong> deque<br /><strong>&gt;&gt;&gt; </strong>queue =
+                        deque([&quot;Eric&quot;, &quot;John&quot;, &quot;Michael&quot;])<br /><strong>&gt;&gt;&gt;
+                        </strong>queue.append(&quot;Terry&quot;)           <em># Terry
+                            arrives</em><br /><strong>&gt;&gt;&gt; </strong>queue.append(&quot;Graham&quot;)        
+                         <em># Graham arrives</em><br /><strong>&gt;&gt;&gt; </strong>queue.popleft()                
+                        <em># The first to arrive now leaves</em><br />&#x27;Eric&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>queue.popleft()                 <em># The second to arrive now
+                            leaves</em><br />&#x27;John&#x27;<br /><strong>&gt;&gt;&gt; </strong>queue                  
+                                <em># Remaining queue in order of arrival</em><br />deque([&#x27;Michael&#x27;,
+                        &#x27;Terry&#x27;, &#x27;Graham&#x27;])<br /></p>
+                    <h3>3.1.3. List Comprehensions</h3>
+                    <p>List comprehensions provide a concise way to create lists. Common applications are to make new
+                        lists where each element is the result of some operations applied to each member of another
+                        sequence or iterable, or to create a subsequence of those elements that satisfy a certain
+                        condition.</p>
+                    <p>For example, assume we want to create a list of squares, like:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares = []<br /><strong>&gt;&gt;&gt; for</strong> x
+                        <strong>in</strong> range(10):<br /><strong>... </strong>  
+                         squares.append(x**2)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>squares<br />[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]<br /></p>
+                    <p>Note that this creates (or overwrites) a variable named x that still exists after the loop
+                        completes. We can calculate the list of squares without any side effects using:</p>
+                    <p>squares = list(map(<strong>lambda</strong> x: x**2, range(10)))<br /></p>
+                    <p>or, equivalently:</p>
+                    <p>squares = [x**2 <strong>for</strong> x <strong>in</strong> range(10)]<br /></p>
+                    <p>which is more concise and readable.</p>
+                    <p>A list comprehension consists of brackets containing an expression followed by a for clause, then
+                        zero or more for or if clauses. The result will be a new list resulting from evaluating the
+                        expression in the context of the for and if clauses which follow it. For example, this listcomp
+                        combines the elements of two lists if they are not equal:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>[(x, y) <strong>for</strong> x <strong>in</strong>
+                        [1,2,3] <strong>for</strong> y <strong>in</strong> [3,1,4] <strong>if</strong> x != y]<br />[(1,
+                        3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]<br /></p>
+                    <p>and it’s equivalent to:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>combs = []<br /><strong>&gt;&gt;&gt; for</strong> x
+                        <strong>in</strong> [1,2,3]:<br /><strong>... </strong>    <strong>for</strong> y
+                        <strong>in</strong> [3,1,4]:<br /><strong>... </strong>        <strong>if</strong> x !=
+                        y:<br /><strong>... </strong>            combs.append((x,
+                        y))<br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>combs<br />[(1, 3), (1, 4), (2,
+                        3), (2, 1), (2, 4), (3, 1), (3, 4)]<br /></p>
+                    <p>Note how the order of the <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#for">for</a> and <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#if">if</a> statements is the
+                        same in both these snippets.</p>
+                    <p>If the expression is a tuple (e.g. the (x, y) in the previous example), it must be parenthesized.
+                    </p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>vec = [-4, -2, 0, 2, 4]<br /><strong>&gt;&gt;&gt;
+                        </strong><em># create a new list with the values doubled</em><br /><strong>&gt;&gt;&gt;
+                        </strong>[x*2 <strong>for</strong> x <strong>in</strong> vec]<br />[-8, -4, 0, 4,
+                        8]<br /><strong>&gt;&gt;&gt; </strong><em># filter the list to exclude negative
+                            numbers</em><br /><strong>&gt;&gt;&gt; </strong>[x <strong>for</strong> x
+                        <strong>in</strong> vec <strong>if</strong> x &gt;= 0]<br />[0, 2, 4]<br /><strong>&gt;&gt;&gt;
+                        </strong><em># apply a function to all the elements</em><br /><strong>&gt;&gt;&gt;
+                        </strong>[abs(x) <strong>for</strong> x <strong>in</strong> vec]<br />[4, 2, 0, 2,
+                        4]<br /><strong>&gt;&gt;&gt; </strong><em># call a method on each
+                            element</em><br /><strong>&gt;&gt;&gt; </strong>freshfruit = [&#x27;  banana&#x27;, &#x27;
+                         loganberry &#x27;, &#x27;passion fruit  &#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>[weapon.strip() <strong>for</strong> weapon <strong>in</strong>
+                        freshfruit]<br />[&#x27;banana&#x27;, &#x27;loganberry&#x27;, &#x27;passion
+                        fruit&#x27;]<br /><strong>&gt;&gt;&gt; </strong><em># create a list of 2-tuples like (number,
+                            square)</em><br /><strong>&gt;&gt;&gt; </strong>[(x, x**2) <strong>for</strong> x
+                        <strong>in</strong> range(6)]<br />[(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5,
+                        25)]<br /><strong>&gt;&gt;&gt; </strong><em># the tuple must be parenthesized, otherwise an
+                            error is raised</em><br /><strong>&gt;&gt;&gt; </strong>[x, x**2 <strong>for</strong> x
+                        <strong>in</strong> range(6)]<br />  File &quot;&lt;stdin&gt;&quot;, line 1<br />    [x, x**2
+                        <strong>for</strong> x <strong>in</strong> range(6)]<br />     ^^^^^^^<br />SyntaxError: did you
+                        forget parentheses around the comprehension target?<br /><strong>&gt;&gt;&gt; </strong><em>#
+                            flatten a list using a listcomp with two &#x27;for&#x27;</em><br /><strong>&gt;&gt;&gt;
+                        </strong>vec = [[1,2,3], [4,5,6], [7,8,9]]<br /><strong>&gt;&gt;&gt; </strong>[num
+                        <strong>for</strong> elem <strong>in</strong> vec <strong>for</strong> num <strong>in</strong>
+                        elem]<br />[1, 2, 3, 4, 5, 6, 7, 8, 9]<br /></p>
+                    <p>List comprehensions can contain complex expressions and nested functions:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; from</strong> <strong>math</strong> <strong>import</strong>
+                        pi<br /><strong>&gt;&gt;&gt; </strong>[str(round(pi, i)) <strong>for</strong> i
+                        <strong>in</strong> range(1, 6)]<br />[&#x27;3.1&#x27;, &#x27;3.14&#x27;, &#x27;3.142&#x27;,
+                        &#x27;3.1416&#x27;, &#x27;3.14159&#x27;]<br /></p>
+                    <h3>3.1.4. Nested List Comprehensions</h3>
+                    <p>The initial expression in a list comprehension can be any arbitrary expression, including another
+                        list comprehension.</p>
+                    <p>Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>matrix = [<br /><strong>... </strong>    [1, 2, 3,
+                        4],<br /><strong>... </strong>    [5, 6, 7, 8],<br /><strong>... </strong>    [9, 10, 11,
+                        12],<br /><strong>... </strong>]<br /></p>
+                    <p>The following list comprehension will transpose rows and columns:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>[[row[i] <strong>for</strong> row <strong>in</strong>
+                        matrix] <strong>for</strong> i <strong>in</strong> range(4)]<br />[[1, 5, 9], [2, 6, 10], [3, 7,
+                        11], [4, 8, 12]]<br /></p>
+                    <p>As we saw in the previous section, the nested listcomp is evaluated in the context of the <a
+                            href="https://docs.python.org/3/reference/compound_stmts.html#for">for</a> that follows it,
+                        so this example is equivalent to:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>transposed = []<br /><strong>&gt;&gt;&gt; for</strong>
+                        i <strong>in</strong> range(4):<br /><strong>... </strong>    transposed.append([row[i]
+                        <strong>for</strong> row <strong>in</strong>
+                        matrix])<br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>transposed<br />[[1, 5,
+                        9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]<br /></p>
+                    <p>which, in turn, is the same as:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>transposed = []<br /><strong>&gt;&gt;&gt; for</strong>
+                        i <strong>in</strong> range(4):<br /><strong>... </strong>    <em># the following 3 lines
+                            implement the nested listcomp</em><br /><strong>... </strong>    transposed_row =
+                        []<br /><strong>... </strong>    <strong>for</strong> row <strong>in</strong>
+                        matrix:<br /><strong>... </strong>        transposed_row.append(row[i])<br /><strong>...
+                        </strong>  
+                         transposed.append(transposed_row)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>transposed<br />[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]<br /></p>
+                    <p>In the real world, you should prefer built-in functions to complex flow statements. The <a
+                            href="https://docs.python.org/3/library/functions.html#zip">zip()</a> function would do a
+                        great job for this use case:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>list(zip(*matrix))<br />[(1, 5, 9), (2, 6, 10), (3, 7,
+                        11), (4, 8, 12)]<br /></p>
+                    <p>See <a
+                            href="https://docs.python.org/3/tutorial/controlflow.html#tut-unpacking-arguments">Unpacking
+                            Argument Lists</a> for details on the asterisk in this line.</p>
+                    <h2>3.2. The del statement</h2>
+                    <p>There is a way to remove an item from a list given its index instead of its value: the <a
+                            href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> statement. This
+                        differs from the pop() method which returns a value. The del statement can also be used to
+                        remove slices from a list or clear the entire list (which we did earlier by assignment of an
+                        empty list to the slice). For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a = [-1, 1, 66.25, 333, 333,
+                        1234.5]<br /><strong>&gt;&gt;&gt; del</strong> a[0]<br /><strong>&gt;&gt;&gt;
+                        </strong>a<br />[1, 66.25, 333, 333, 1234.5]<br /><strong>&gt;&gt;&gt; del</strong>
+                        a[2:4]<br /><strong>&gt;&gt;&gt; </strong>a<br />[1, 66.25, 1234.5]<br /><strong>&gt;&gt;&gt;
+                            del</strong> a[:]<br /><strong>&gt;&gt;&gt; </strong>a<br />[]<br /></p>
+                    <p><a href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> can also be used to
+                        delete entire variables:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; del</strong> a<br /></p>
+                    <p>Referencing the name a hereafter is an error (at least until another value is assigned to it).
+                        We’ll find other uses for <a
+                            href="https://docs.python.org/3/reference/simple_stmts.html#del">del</a> later.</p>
+                    <h2>3.3. Tuples and Sequences</h2>
+                    <p>We saw that lists and strings have many common properties, such as indexing and slicing
+                        operations. They are two examples of <em>sequence</em> data types (see <a
+                            href="https://docs.python.org/3/library/stdtypes.html#typesseq">Sequence Types — list,
+                            tuple, range</a>). Since Python is an evolving language, other sequence data types may be
+                        added. There is also another standard sequence data type: the <em>tuple</em>.</p>
+                    <p>A tuple consists of a number of values separated by commas, for instance:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>t = 12345, 54321,
+                        &#x27;hello!&#x27;<br /><strong>&gt;&gt;&gt; </strong>t[0]<br />12345<br /><strong>&gt;&gt;&gt;
+                        </strong>t<br />(12345, 54321, &#x27;hello!&#x27;)<br /><strong>&gt;&gt;&gt; </strong><em>#
+                            Tuples may be nested:</em><br /><strong>... </strong>u = t, (1, 2, 3, 4,
+                        5)<br /><strong>&gt;&gt;&gt; </strong>u<br />((12345, 54321, &#x27;hello!&#x27;), (1, 2, 3, 4,
+                        5))<br /><strong>&gt;&gt;&gt; </strong><em># Tuples are immutable:</em><br /><strong>...
+                        </strong>t[0] = 88888<br />Traceback (most recent call last):<br />  File
+                        &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;<br />TypeError: &#x27;tuple&#x27; object
+                        does not support item assignment<br /><strong>&gt;&gt;&gt; </strong><em># but they can contain
+                            mutable objects:</em><br /><strong>... </strong>v = ([1, 2, 3], [3, 2,
+                        1])<br /><strong>&gt;&gt;&gt; </strong>v<br />([1, 2, 3], [3, 2, 1])<br /></p>
+                    <p>As you see, on output tuples are always enclosed in parentheses, so that nested tuples are
+                        interpreted correctly; they may be input with or without surrounding parentheses, although often
+                        parentheses are necessary anyway (if the tuple is part of a larger expression). It is not
+                        possible to assign to the individual items of a tuple, however it is possible to create tuples
+                        which contain mutable objects, such as lists.</p>
+                    <p>Though tuples may seem similar to lists, they are often used in different situations and for
+                        different purposes. Tuples are <a
+                            href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>, and usually
+                        contain a heterogeneous sequence of elements that are accessed via unpacking (see later in this
+                        section) or indexing (or even by attribute in the case of <a
+                            href="https://docs.python.org/3/library/collections.html#collections.namedtuple">namedtuples</a>).
+                        Lists are <a href="https://docs.python.org/3/glossary.html#term-mutable">mutable</a>, and their
+                        elements are usually homogeneous and are accessed by iterating over the list.</p>
+                    <p>A special problem is the construction of tuples containing 0 or 1 items: the syntax has some
+                        extra quirks to accommodate these. Empty tuples are constructed by an empty pair of parentheses;
+                        a tuple with one item is constructed by following a value with a comma (it is not sufficient to
+                        enclose a single value in parentheses). Ugly, but effective. For example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>empty = ()<br /><strong>&gt;&gt;&gt; </strong>singleton
+                        = &#x27;hello&#x27;,    <em># &lt;-- note trailing comma</em><br /><strong>&gt;&gt;&gt;
+                        </strong>len(empty)<br />0<br /><strong>&gt;&gt;&gt;
+                        </strong>len(singleton)<br />1<br /><strong>&gt;&gt;&gt;
+                        </strong>singleton<br />(&#x27;hello&#x27;,)<br /></p>
+                    <p>The statement t = 12345, 54321, &#x27;hello!&#x27; is an example of <em>tuple packing</em>: the
+                        values 12345, 54321 and &#x27;hello!&#x27; are packed together in a tuple. The reverse operation
+                        is also possible:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>x, y, z = t<br /></p>
+                    <p>This is called, appropriately enough, <em>sequence unpacking</em> and works for any sequence on
+                        the right-hand side. Sequence unpacking requires that there are as many variables on the left
+                        side of the equals sign as there are elements in the sequence. Note that multiple assignment is
+                        really just a combination of tuple packing and sequence unpacking.</p>
+                    <h2>3.4. Sets</h2>
+                    <p>Python also includes a data type for <em>sets</em>. A set is an unordered collection with no
+                        duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set
+                        objects also support mathematical operations like union, intersection, difference, and symmetric
+                        difference.</p>
+                    <p>Curly braces or the <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a>
+                        function can be used to create sets. Note: to create an empty set you have to use set(), not {};
+                        the latter creates an empty dictionary, a data structure that we discuss in the next section.
+                    </p>
+                    <p>Here is a brief demonstration:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = {&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;}<br /><strong>&gt;&gt;&gt; </strong>print(basket)                      <em>#
+                            show that duplicates have been removed</em><br />{&#x27;orange&#x27;, &#x27;banana&#x27;,
+                        &#x27;pear&#x27;, &#x27;apple&#x27;}<br /><strong>&gt;&gt;&gt; </strong>&#x27;orange&#x27;
+                        <strong>in</strong> basket                 <em># fast membership
+                            testing</em><br />True<br /><strong>&gt;&gt;&gt; </strong>&#x27;crabgrass&#x27;
+                        <strong>in</strong> basket<br />False<br /><br /><strong>&gt;&gt;&gt; </strong><em># Demonstrate
+                            set operations on unique letters from two
+                            words</em><br /><strong>...</strong><br /><strong>&gt;&gt;&gt; </strong>a =
+                        set(&#x27;abracadabra&#x27;)<br /><strong>&gt;&gt;&gt; </strong>b =
+                        set(&#x27;alacazam&#x27;)<br /><strong>&gt;&gt;&gt; </strong>a                                
+                         <em># unique letters in a</em><br />{&#x27;a&#x27;, &#x27;r&#x27;, &#x27;b&#x27;,
+                        &#x27;c&#x27;, &#x27;d&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a - b                          
+                           <em># letters in a but not in b</em><br />{&#x27;r&#x27;, &#x27;d&#x27;,
+                        &#x27;b&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a | b                              <em>#
+                            letters in a or b or both</em><br />{&#x27;a&#x27;, &#x27;c&#x27;, &#x27;r&#x27;,
+                        &#x27;d&#x27;, &#x27;b&#x27;, &#x27;m&#x27;, &#x27;z&#x27;,
+                        &#x27;l&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a &amp; b                              <em>#
+                            letters in both a and b</em><br />{&#x27;a&#x27;, &#x27;c&#x27;}<br /><strong>&gt;&gt;&gt;
+                        </strong>a ^ b                              <em># letters in a or b but not
+                            both</em><br />{&#x27;r&#x27;, &#x27;d&#x27;, &#x27;b&#x27;, &#x27;m&#x27;, &#x27;z&#x27;,
+                        &#x27;l&#x27;}<br /></p>
+                    <p>Similarly to <a href="https://docs.python.org/3/tutorial/datastructures.html#tut-listcomps">list
+                            comprehensions</a>, set comprehensions are also supported:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a = {x <strong>for</strong> x <strong>in</strong>
+                        &#x27;abracadabra&#x27; <strong>if</strong> x <strong>not</strong> <strong>in</strong>
+                        &#x27;abc&#x27;}<br /><strong>&gt;&gt;&gt; </strong>a<br />{&#x27;r&#x27;, &#x27;d&#x27;}<br />
+                    </p>
+                    <h2>3.5. Dictionaries</h2>
+                    <p>Another useful data type built into Python is the <em>dictionary</em> (see <a
+                            href="https://docs.python.org/3/library/stdtypes.html#typesmapping">Mapping Types —
+                            dict</a>). Dictionaries are sometimes found in other languages as “associative memories” or
+                        “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries
+                        are indexed by <em>keys</em>, which can be any immutable type; strings and numbers can always be
+                        keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple
+                        contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t
+                        use lists as keys, since lists can be modified in place using index assignments, slice
+                        assignments, or methods like append() and extend().</p>
+                    <p>It is best to think of a dictionary as a set of <em>key: value</em> pairs, with the requirement
+                        that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary:
+                        {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value
+                        pairs to the dictionary; this is also the way dictionaries are written on output.</p>
+                    <p>The main operations on a dictionary are storing a value with some key and extracting the value
+                        given the key. It is also possible to delete a key:value pair with del. If you store using a key
+                        that is already in use, the old value associated with that key is forgotten. It is an error to
+                        extract a value using a non-existent key.</p>
+                    <p>Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in
+                        insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single
+                        key is in the dictionary, use the <a
+                            href="https://docs.python.org/3/reference/expressions.html#in">in</a> keyword.</p>
+                    <p>Here is a small example using a dictionary:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>tel = {&#x27;jack&#x27;: 4098, &#x27;sape&#x27;:
+                        4139}<br /><strong>&gt;&gt;&gt; </strong>tel[&#x27;guido&#x27;] = 4127<br /><strong>&gt;&gt;&gt;
+                        </strong>tel<br />{&#x27;jack&#x27;: 4098, &#x27;sape&#x27;: 4139, &#x27;guido&#x27;:
+                        4127}<br /><strong>&gt;&gt;&gt;
+                        </strong>tel[&#x27;jack&#x27;]<br />4098<br /><strong>&gt;&gt;&gt; del</strong>
+                        tel[&#x27;sape&#x27;]<br /><strong>&gt;&gt;&gt; </strong>tel[&#x27;irv&#x27;] =
+                        4127<br /><strong>&gt;&gt;&gt; </strong>tel<br />{&#x27;jack&#x27;: 4098, &#x27;guido&#x27;:
+                        4127, &#x27;irv&#x27;: 4127}<br /><strong>&gt;&gt;&gt;
+                        </strong>list(tel)<br />[&#x27;jack&#x27;, &#x27;guido&#x27;,
+                        &#x27;irv&#x27;]<br /><strong>&gt;&gt;&gt; </strong>sorted(tel)<br />[&#x27;guido&#x27;,
+                        &#x27;irv&#x27;, &#x27;jack&#x27;]<br /><strong>&gt;&gt;&gt; </strong>&#x27;guido&#x27;
+                        <strong>in</strong> tel<br />True<br /><strong>&gt;&gt;&gt; </strong>&#x27;jack&#x27;
+                        <strong>not</strong> <strong>in</strong> tel<br />False<br /></p>
+                    <p>The <a href="https://docs.python.org/3/library/stdtypes.html#dict">dict()</a> constructor builds
+                        dictionaries directly from sequences of key-value pairs:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>dict([(&#x27;sape&#x27;, 4139), (&#x27;guido&#x27;,
+                        4127), (&#x27;jack&#x27;, 4098)])<br />{&#x27;sape&#x27;: 4139, &#x27;guido&#x27;: 4127,
+                        &#x27;jack&#x27;: 4098}<br /></p>
+                    <p>In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value
+                        expressions:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>{x: x**2 <strong>for</strong> x <strong>in</strong> (2,
+                        4, 6)}<br />{2: 4, 4: 16, 6: 36}<br /></p>
+                    <p>When the keys are simple strings, it is sometimes easier to specify pairs using keyword
+                        arguments:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>dict(sape=4139, guido=4127,
+                        jack=4098)<br />{&#x27;sape&#x27;: 4139, &#x27;guido&#x27;: 4127, &#x27;jack&#x27;: 4098}<br />
+                    </p>
+                    <h2>3.6. Looping Techniques</h2>
+                    <p>When looping through dictionaries, the key and corresponding value can be retrieved at the same
+                        time using the items() method.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>knights = {&#x27;gallahad&#x27;: &#x27;the pure&#x27;,
+                        &#x27;robin&#x27;: &#x27;the brave&#x27;}<br /><strong>&gt;&gt;&gt; for</strong> k, v
+                        <strong>in</strong> knights.items():<br /><strong>... </strong>    print(k,
+                        v)<br /><strong>...</strong><br />gallahad the pure<br />robin the brave<br /></p>
+                    <p>When looping through a sequence, the position index and corresponding value can be retrieved at
+                        the same time using the <a
+                            href="https://docs.python.org/3/library/functions.html#enumerate">enumerate()</a> function.
+                    </p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; for</strong> i, v <strong>in</strong>
+                        enumerate([&#x27;tic&#x27;, &#x27;tac&#x27;, &#x27;toe&#x27;]):<br /><strong>... </strong>  
+                         print(i, v)<br /><strong>...</strong><br />0 tic<br />1 tac<br />2 toe<br /></p>
+                    <p>To loop over two or more sequences at the same time, the entries can be paired with the <a
+                            href="https://docs.python.org/3/library/functions.html#zip">zip()</a> function.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>questions = [&#x27;name&#x27;, &#x27;quest&#x27;,
+                        &#x27;favorite color&#x27;]<br /><strong>&gt;&gt;&gt; </strong>answers = [&#x27;lancelot&#x27;,
+                        &#x27;the holy grail&#x27;, &#x27;blue&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> q, a
+                        <strong>in</strong> zip(questions, answers):<br /><strong>... </strong>    print(&#x27;What is
+                        your <strong>{0}</strong>?  It is <strong>{1}</strong>.&#x27;.format(q,
+                        a))<br /><strong>...</strong><br />What is your name?  It is lancelot.<br />What is your quest?
+                         It is the holy grail.<br />What is your favorite color?  It is blue.<br /></p>
+                    <p>To loop over a sequence in reverse, first specify the sequence in a forward direction and then
+                        call the <a href="https://docs.python.org/3/library/functions.html#reversed">reversed()</a>
+                        function.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; for</strong> i <strong>in</strong> reversed(range(1, 10,
+                        2)):<br /><strong>... </strong>  
+                         print(i)<br /><strong>...</strong><br />9<br />7<br />5<br />3<br />1<br /></p>
+                    <p>To loop over a sequence in sorted order, use the <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> function which
+                        returns a new sorted list while leaving the source unaltered.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = [&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> i <strong>in</strong>
+                        sorted(basket):<br /><strong>... </strong>  
+                         print(i)<br /><strong>...</strong><br />apple<br />apple<br />banana<br />orange<br />orange<br />pear<br />
+                    </p>
+                    <p>Using <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a> on a sequence
+                        eliminates duplicate elements. The use of <a
+                            href="https://docs.python.org/3/library/functions.html#sorted">sorted()</a> in combination
+                        with <a href="https://docs.python.org/3/library/stdtypes.html#set">set()</a> over a sequence is
+                        an idiomatic way to loop over unique elements of the sequence in sorted order.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>basket = [&#x27;apple&#x27;, &#x27;orange&#x27;,
+                        &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;,
+                        &#x27;banana&#x27;]<br /><strong>&gt;&gt;&gt; for</strong> f <strong>in</strong>
+                        sorted(set(basket)):<br /><strong>... </strong>  
+                         print(f)<br /><strong>...</strong><br />apple<br />banana<br />orange<br />pear<br /></p>
+                    <p>It is sometimes tempting to change a list while you are looping over it; however, it is often
+                        simpler and safer to create a new list instead.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; import</strong> <strong>math</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>raw_data = [56.2, float(&#x27;NaN&#x27;), 51.7, 55.3, 52.5, float(&#x27;NaN&#x27;),
+                        47.8]<br /><strong>&gt;&gt;&gt; </strong>filtered_data = []<br /><strong>&gt;&gt;&gt;
+                            for</strong> value <strong>in</strong> raw_data:<br /><strong>... </strong>  
+                         <strong>if</strong> <strong>not</strong> math.isnan(value):<br /><strong>... </strong>      
+                         filtered_data.append(value)<br /><strong>...</strong><br /><strong>&gt;&gt;&gt;
+                        </strong>filtered_data<br />[56.2, 51.7, 55.3, 52.5, 47.8]<br /></p>
+                    <h2>3.7. More on Conditions</h2>
+                    <p>The conditions used in while and if statements can contain any operators, not just comparisons.
+                    </p>
+                    <p>The comparison operators in and not in are membership tests that determine whether a value is in
+                        (or not in) a container. The operators is and is not compare whether two objects are really the
+                        same object. All comparison operators have the same priority, which is lower than that of all
+                        numerical operators.</p>
+                    <p>Comparisons can be chained. For example, a &lt; b == c tests whether a is less than b and
+                        moreover b equals c.</p>
+                    <p>Comparisons may be combined using the Boolean operators and and or, and the outcome of a
+                        comparison (or of any other Boolean expression) may be negated with not. These have lower
+                        priorities than comparison operators; between them, not has the highest priority and or the
+                        lowest, so that A and not B or C is equivalent to (A and (not B)) or C. As always, parentheses
+                        can be used to express the desired composition.</p>
+                    <p>The Boolean operators and and or are so-called <em>short-circuit</em> operators: their arguments
+                        are evaluated from left to right, and evaluation stops as soon as the outcome is determined. For
+                        example, if A and C are true but B is false, A and B and C does not evaluate the expression C.
+                        When used as a general value and not as a Boolean, the return value of a short-circuit operator
+                        is the last evaluated argument.</p>
+                    <p>It is possible to assign the result of a comparison or other Boolean expression to a variable.
+                        For example,</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>string1, string2, string3 = &#x27;&#x27;,
+                        &#x27;Trondheim&#x27;, &#x27;Hammer Dance&#x27;<br /><strong>&gt;&gt;&gt; </strong>non_null =
+                        string1 <strong>or</strong> string2 <strong>or</strong> string3<br /><strong>&gt;&gt;&gt;
+                        </strong>non_null<br />&#x27;Trondheim&#x27;<br /></p>
+                    <p>Note that in Python, unlike C, assignment inside expressions must be done explicitly with the <a
+                            href="https://docs.python.org/3/faq/design.html#why-can-t-i-use-an-assignment-in-an-expression">walrus
+                            operator</a> :=. This avoids a common class of problems encountered in C programs: typing =
+                        in an expression when == was intended.</p>
+                    <h2>3.8. Comparing Sequences and Other Types</h2>
+                    <p>Sequence objects typically may be compared to other objects with the same sequence type. The
+                        comparison uses <em>lexicographical</em> ordering: first the first two items are compared, and
+                        if they differ this determines the outcome of the comparison; if they are equal, the next two
+                        items are compared, and so on, until either sequence is exhausted. If two items to be compared
+                        are themselves sequences of the same type, the lexicographical comparison is carried out
+                        recursively. If all items of two sequences compare equal, the sequences are considered equal. If
+                        one sequence is an initial sub-sequence of the other, the shorter sequence is the smaller
+                        (lesser) one. Lexicographical ordering for strings uses the Unicode code point number to order
+                        individual characters. Some examples of comparisons between sequences of the same type:</p>
+                    <p>(1, 2, 3)              &lt; (1, 2, 4)<br />[1, 2, 3]              &lt; [1, 2,
+                        4]<br />&#x27;ABC&#x27; &lt; &#x27;C&#x27; &lt; &#x27;Pascal&#x27; &lt;
+                        &#x27;Python&#x27;<br />(1, 2, 3, 4)           &lt; (1, 2, 4)<br />(1, 2)                 &lt;
+                        (1, 2, -1)<br />(1, 2, 3)             == (1.0, 2.0, 3.0)<br />(1, 2, (&#x27;aa&#x27;,
+                        &#x27;ab&#x27;))   &lt; (1, 2, (&#x27;abc&#x27;, &#x27;a&#x27;), 4)<br /></p>
+                    <p>Note that comparing objects of different types with &lt; or &gt; is legal provided that the
+                        objects have appropriate comparison methods. For example, mixed numeric types are compared
+                        according to their numeric value, so 0 equals 0.0, etc. Otherwise, rather than providing an
+                        arbitrary ordering, the interpreter will raise a <a
+                            href="https://docs.python.org/3/library/exceptions.html#TypeError">TypeError</a> exception.
+                    </p>
+                    <p>‍</p>
+                </div>
+            </div>
+            <div class="button-wrapper"><a href="/Files/index.html" class="button w-button">← View all posts</a></div>
+        </div>
+    </div>
+    <footer class="footer wf-section">
+        <div class="w-container">
+            <div>
+                <div class="w-row">
+                    <div class="w-col w-col-8"></div>
+                    <div class="align-content-right w-col w-col-4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=62d3db6e04d0a360c05d6aff"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="datastructures.js"
+        type="text/javascript"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+
+</html>

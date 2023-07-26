@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html data-wf-domain="sip-project.webflow.io" data-wf-page="62d3db6e04d0a386245d6b08"
+    data-wf-site="62d3db6e04d0a360c05d6aff" data-wf-status="1">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction To Python | Blog</title>
+    <meta
+        content="Learn about the basic operators, datatypes and some basic in-built functions in python and get started with coding in python!"
+        name="description" />
+    <meta content="Introduction To Python" property="og:title" />
+    <meta
+        content="Learn about the basic operators, datatypes and some basic in-built functions in python and get started with coding in python!"
+        property="og:description" />
+    <meta content="" property="og:image" />
+    <meta content="Introduction To Python" property="twitter:title" />
+    <meta
+        content="Learn about the basic operators, datatypes and some basic in-built functions in python and get started with coding in python!"
+        property="twitter:description" />
+    <meta content="" property="twitter:image" />
+    <meta property="og:type" content="website" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="styleintro.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic", "Domine:regular,700"] } });</script>
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link href="https://uploads-ssl.webflow.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://uploads-ssl.webflow.com/img/webclip.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+        role="banner" class="navigation-bar w-nav">
+        <div class="w-container"><a href="#" class="site-name-link w-nav-brand">
+                <div class="site-name">LearnPy</div>
+            </a>
+            <nav role="navigation" class="navigation-menu w-nav-menu"><a href="/Files/index.html"
+                    class="nav-link w-nav-link">Home</a><a href="/Files/index.html" class="nav-link w-nav-link">All
+                    Posts</a></nav>
+            <div class="menu-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="w-container">
+            <div class="blog-body-wrapper">
+                <div class="post-title-section">
+                    <h1>Introduction To Python</h1>
+                    <div class="post-info-wrapper"><a href="#" class="post-info when-link w-dyn-bind-empty"></a></div>
+                </div>
+                <div class="body-copy w-richtext">
+                    <h2>1.1. Using Python as a Calculator</h2>
+                    <p>Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt,
+                        &gt;&gt;&gt;. (It shouldn’t take long.)</p>
+                    <h3>1.1.1. Numbers</h3>
+                    <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write
+                        the value. Expression syntax is straightforward: the operators +, -, * and / work just like in
+                        most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. For
+                        example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>2 + 2<br />4<br /><strong>&gt;&gt;&gt; </strong>50 -
+                        5*6<br />20<br /><strong>&gt;&gt;&gt; </strong>(50 - 5*6) / 4<br />5.0<br /><strong>&gt;&gt;&gt;
+                        </strong>8 / 5  <em># division always returns a floating point number</em><br />1.6<br /></p>
+                    <p>The integer numbers (e.g. 2, 4, 20) have type <a
+                            href="https://docs.python.org/3/library/functions.html#int">int</a>, the ones with a
+                        fractional part (e.g. 5.0, 1.6) have type <a
+                            href="https://docs.python.org/3/library/functions.html#float">float</a>. We will see more
+                        about numeric types later in the tutorial.</p>
+                    <p>Division (/) always returns a float. To do <a
+                            href="https://docs.python.org/3/glossary.html#term-floor-division">floor division</a> and
+                        get an integer result (discarding any fractional result) you can use the // operator; to
+                        calculate the remainder you can use %:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>17 / 3  <em># classic division returns a
+                            float</em><br />5.666666666666667<br />&gt;&gt;&gt;<br /><strong>&gt;&gt;&gt; </strong>17 //
+                        3  <em># floor division discards the fractional part</em><br />5<br /><strong>&gt;&gt;&gt;
+                        </strong>17 % 3  <em># the % operator returns the remainder of the
+                            division</em><br />2<br /><strong>&gt;&gt;&gt; </strong>5 * 3 + 2  <em># floored quotient *
+                            divisor + remainder</em><br />17<br /></p>
+                    <p>With Python, it is possible to use the ** operator to calculate powers <a
+                            href="https://docs.python.org/3/tutorial/introduction.html#id3">1</a>:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>5 ** 2  <em># 5
+                            squared</em><br />25<br /><strong>&gt;&gt;&gt; </strong>2 ** 7  <em># 2 to the power of
+                            7</em><br />128<br /></p>
+                    <p>The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed
+                        before the next interactive prompt:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>width = 20<br /><strong>&gt;&gt;&gt; </strong>height =
+                        5 * 9<br /><strong>&gt;&gt;&gt; </strong>width * height<br />900<br /></p>
+                    <p>If a variable is not “defined” (assigned a value), trying to use it will give you an error:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>n  <em># try to access an undefined
+                            variable</em><br />Traceback (most recent call last):<br />  File &quot;&lt;stdin&gt;&quot;,
+                        line 1, in &lt;module&gt;<br />NameError: name &#x27;n&#x27; is not defined<br /></p>
+                    <p>There is full support for floating point; operators with mixed type operands convert the integer
+                        operand to floating point:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>4 * 3.75 - 1<br />14.0<br /></p>
+                    <p>In interactive mode, the last printed expression is assigned to the variable _. This means that
+                        when you are using Python as a desk calculator, it is somewhat easier to continue calculations,
+                        for example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>tax = 12.5 / 100<br /><strong>&gt;&gt;&gt;
+                        </strong>price = 100.50<br /><strong>&gt;&gt;&gt; </strong>price *
+                        tax<br />12.5625<br /><strong>&gt;&gt;&gt; </strong>price +
+                        _<br />113.0625<br /><strong>&gt;&gt;&gt; </strong>round(_, 2)<br />113.06<br /></p>
+                    <p>This variable should be treated as read-only by the user. Don’t explicitly assign a value to it —
+                        you would create an independent local variable with the same name masking the built-in variable
+                        with its magic behavior.</p>
+                    <p>In addition to <a href="https://docs.python.org/3/library/functions.html#int">int</a> and <a
+                            href="https://docs.python.org/3/library/functions.html#float">float</a>, Python supports
+                        other types of numbers, such as <a
+                            href="https://docs.python.org/3/library/decimal.html#decimal.Decimal">Decimal</a> and <a
+                            href="https://docs.python.org/3/library/fractions.html#fractions.Fraction">Fraction</a>.
+                        Python also has built-in support for <a
+                            href="https://docs.python.org/3/library/stdtypes.html#typesnumeric">complex numbers</a>, and
+                        uses the j or J suffix to indicate the imaginary part (e.g. 3+5j).</p>
+                    <h3>1.1.2. Strings</h3>
+                    <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They
+                        can be enclosed in single quotes (&#x27;...&#x27;) or double quotes (&quot;...&quot;) with the
+                        same result <a href="https://docs.python.org/3/tutorial/introduction.html#id4">2</a>. \ can be
+                        used to escape quotes:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>&#x27;spam eggs&#x27;  <em># single
+                            quotes</em><br />&#x27;spam eggs&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>&#x27;doesn<strong>\&#x27;</strong>t&#x27;  <em># use \&#x27; to escape the single
+                            quote...</em><br />&quot;doesn&#x27;t&quot;<br /><strong>&gt;&gt;&gt;
+                        </strong>&quot;doesn&#x27;t&quot;  <em># ...or use double quotes
+                            instead</em><br />&quot;doesn&#x27;t&quot;<br /><strong>&gt;&gt;&gt;
+                        </strong>&#x27;&quot;Yes,&quot; they said.&#x27;<br />&#x27;&quot;Yes,&quot; they
+                        said.&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>&quot;<strong>\&quot;</strong>Yes,<strong>\&quot;</strong> they
+                        said.&quot;<br />&#x27;&quot;Yes,&quot; they said.&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>&#x27;&quot;Isn<strong>\&#x27;</strong>t,&quot; they
+                        said.&#x27;<br />&#x27;&quot;Isn\&#x27;t,&quot; they said.&#x27;<br /></p>
+                    <p>In the interactive interpreter, the output string is enclosed in quotes and special characters
+                        are escaped with backslashes. While this might sometimes look different from the input (the
+                        enclosing quotes could change), the two strings are equivalent. The string is enclosed in double
+                        quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in
+                        single quotes. The <a href="https://docs.python.org/3/library/functions.html#print">print()</a>
+                        function produces a more readable output, by omitting the enclosing quotes and by printing
+                        escaped and special characters:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>&#x27;&quot;Isn<strong>\&#x27;</strong>t,&quot; they
+                        said.&#x27;<br />&#x27;&quot;Isn\&#x27;t,&quot; they said.&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>print(&#x27;&quot;Isn<strong>\&#x27;</strong>t,&quot; they
+                        said.&#x27;)<br />&quot;Isn&#x27;t,&quot; they said.<br /><strong>&gt;&gt;&gt; </strong>s =
+                        &#x27;First line.<strong>\n</strong>Second line.&#x27;  <em># \n means
+                            newline</em><br /><strong>&gt;&gt;&gt; </strong>s  <em># without print(), \n is included in
+                            the output</em><br />&#x27;First line.\nSecond line.&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>print(s)  <em># with print(), \n produces a new line</em><br />First line.<br />Second
+                        line.<br /></p>
+                    <p>If you don’t want characters prefaced by \ to be interpreted as special characters, you can use
+                        <em>raw strings</em> by adding an r before the first quote:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>print(&#x27;C:\some<strong>\n</strong>ame&#x27;)  <em>#
+                            here \n means newline!</em><br />C:\some<br />ame<br /><strong>&gt;&gt;&gt;
+                        </strong>print(r&#x27;C:\some\name&#x27;)  <em># note the r before the
+                            quote</em><br />C:\some\name<br /></p>
+                    <p>String literals can span multiple lines. One way is using triple-quotes:
+                        &quot;&quot;&quot;...&quot;&quot;&quot; or &#x27;&#x27;&#x27;...&#x27;&#x27;&#x27;. End of lines
+                        are automatically included in the string, but it’s possible to prevent this by adding a \ at the
+                        end of the line. The following example:</p>
+                    <p>print(&quot;&quot;&quot;<strong>\</strong><br />Usage: thingy [OPTIONS]<br />     -h            
+                                   Display this usage message<br />     -H hostname               Hostname to connect
+                        to<br />&quot;&quot;&quot;)<br /></p>
+                    <p>produces the following output (note that the initial newline is not included):</p>
+                    <p>Usage: thingy [OPTIONS]<br />     -h                        Display this usage message<br />    
+                        -H hostname               Hostname to connect to<br /></p>
+                    <p>Strings can be concatenated (glued together) with the + operator, and repeated with *:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong><em># 3 times &#x27;un&#x27;, followed by
+                            &#x27;ium&#x27;</em><br /><strong>&gt;&gt;&gt; </strong>3 * &#x27;un&#x27; +
+                        &#x27;ium&#x27;<br />&#x27;unununium&#x27;<br /></p>
+                    <p>Two or more <em>string literals</em> (i.e. the ones enclosed between quotes) next to each other
+                        are automatically concatenated.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>&#x27;Py&#x27;
+                        &#x27;thon&#x27;<br />&#x27;Python&#x27;<br /></p>
+                    <p>This feature is particularly useful when you want to break long strings:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>text = (&#x27;Put several strings within parentheses
+                        &#x27;<br /><strong>... </strong>        &#x27;to have them joined
+                        together.&#x27;)<br /><strong>&gt;&gt;&gt; </strong>text<br />&#x27;Put several strings within
+                        parentheses to have them joined together.&#x27;<br /></p>
+                    <p>This only works with two literals though, not with variables or expressions:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>prefix = &#x27;Py&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>prefix &#x27;thon&#x27;  <em># can&#x27;t concatenate a variable and a string
+                            literal</em><br />  File &quot;&lt;stdin&gt;&quot;, line 1<br />    prefix
+                        &#x27;thon&#x27;<br />                ^<br />SyntaxError: invalid
+                        syntax<br /><strong>&gt;&gt;&gt; </strong>(&#x27;un&#x27; * 3) &#x27;ium&#x27;<br />  File
+                        &quot;&lt;stdin&gt;&quot;, line 1<br />    (&#x27;un&#x27; * 3) &#x27;ium&#x27;<br />          
+                                ^<br />SyntaxError: invalid syntax<br /></p>
+                    <p>If you want to concatenate variables or a variable and a literal, use +:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>prefix + &#x27;thon&#x27;<br />&#x27;Python&#x27;<br />
+                    </p>
+                    <p>Strings can be <em>indexed</em> (subscripted), with the first character having index 0. There is
+                        no separate character type; a character is simply a string of size one:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word = &#x27;Python&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>word[0]  <em># character in position
+                            0</em><br />&#x27;P&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[5]  <em># character in
+                            position 5</em><br />&#x27;n&#x27;<br /></p>
+                    <p>Indices may also be negative numbers, to start counting from the right:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[-1]  <em># last
+                            character</em><br />&#x27;n&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[-2]  <em>#
+                            second-last character</em><br />&#x27;o&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>word[-6]<br />&#x27;P&#x27;<br /></p>
+                    <p>Note that since -0 is the same as 0, negative indices start from -1.</p>
+                    <p>In addition to indexing, <em>slicing</em> is also supported. While indexing is used to obtain
+                        individual characters, <em>slicing</em> allows you to obtain substring:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[0:2]  <em># characters from position 0 (included)
+                            to 2 (excluded)</em><br />&#x27;Py&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[2:5]  <em>#
+                            characters from position 2 (included) to 5 (excluded)</em><br />&#x27;tho&#x27;<br /></p>
+                    <p>Slice indices have useful defaults; an omitted first index defaults to zero, an omitted second
+                        index defaults to the size of the string being sliced.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[:2]   <em># character from the beginning to
+                            position 2 (excluded)</em><br />&#x27;Py&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[4:]  
+                        <em># characters from position 4 (included) to the
+                            end</em><br />&#x27;on&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[-2:]  <em># characters
+                            from the second-last (included) to the end</em><br />&#x27;on&#x27;<br /></p>
+                    <p>Note how the start is always included, and the end always excluded. This makes sure that s[:i] +
+                        s[i:] is always equal to s:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[:2] +
+                        word[2:]<br />&#x27;Python&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[:4] +
+                        word[4:]<br />&#x27;Python&#x27;<br /></p>
+                    <p>One way to remember how slices work is to think of the indices as pointing <em>between</em>
+                        characters, with the left edge of the first character numbered 0. Then the right edge of the
+                        last character of a string of <em>n</em> characters has index <em>n</em>, for example:</p>
+                    <p> +---+---+---+---+---+---+<br /> | P | y | t | h | o | n |<br /> +---+---+---+---+---+---+<br />
+                        0   1   2   3   4   5   6<br />-6  -5  -4  -3  -2  -1<br /></p>
+                    <p>The first row of numbers gives the position of the indices 0…6 in the string; the second row
+                        gives the corresponding negative indices. The slice from <em>i</em> to <em>j</em> consists of
+                        all characters between the edges labeled <em>i</em> and <em>j</em>, respectively.</p>
+                    <p>For non-negative indices, the length of a slice is the difference of the indices, if both are
+                        within bounds. For example, the length of word[1:3] is 2.</p>
+                    <p>Attempting to use an index that is too large will result in an error:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[42]  <em># the word only has 6
+                            characters</em><br />Traceback (most recent call last):<br />  File
+                        &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;<br />IndexError: string index out of
+                        range<br /></p>
+                    <p>However, out of range slice indexes are handled gracefully when used for slicing:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt;
+                        </strong>word[4:42]<br />&#x27;on&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>word[42:]<br />&#x27;&#x27;<br /></p>
+                    <p>Python strings cannot be changed — they are <a
+                            href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>. Therefore,
+                        assigning to an indexed position in the string results in an error:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>word[0] = &#x27;J&#x27;<br />Traceback (most recent
+                        call last):<br />  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;<br />TypeError:
+                        &#x27;str&#x27; object does not support item assignment<br /><strong>&gt;&gt;&gt;
+                        </strong>word[2:] = &#x27;py&#x27;<br />Traceback (most recent call last):<br />  File
+                        &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;<br />TypeError: &#x27;str&#x27; object does
+                        not support item assignment<br /></p>
+                    <p>If you need a different string, you should create a new one:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>&#x27;J&#x27; +
+                        word[1:]<br />&#x27;Jython&#x27;<br /><strong>&gt;&gt;&gt; </strong>word[:2] +
+                        &#x27;py&#x27;<br />&#x27;Pypy&#x27;<br /></p>
+                    <p>The built-in function <a href="https://docs.python.org/3/library/functions.html#len">len()</a>
+                        returns the length of a string:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>s =
+                        &#x27;supercalifragilisticexpialidocious&#x27;<br /><strong>&gt;&gt;&gt;
+                        </strong>len(s)<br />34<br /></p>
+                    <p><strong>See also</strong></p>
+                    <p><a href="https://docs.python.org/3/library/stdtypes.html#textseq"><strong>Text Sequence Type —
+                                str</strong></a></p>
+                    <p>Strings are examples of <em>sequence types</em>, and support the common operations supported by
+                        such types.</p>
+                    <p><a href="https://docs.python.org/3/library/stdtypes.html#string-methods"><strong>String
+                                Methods</strong></a></p>
+                    <p>Strings support a large number of methods for basic transformations and searching.</p>
+                    <p><a href="https://docs.python.org/3/reference/lexical_analysis.html#f-strings"><strong>Formatted
+                                string literals</strong></a></p>
+                    <p>String literals that have embedded expressions.</p>
+                    <p><a href="https://docs.python.org/3/library/string.html#formatstrings"><strong>Format String
+                                Syntax</strong></a></p>
+                    <p>Information about string formatting with <a
+                            href="https://docs.python.org/3/library/stdtypes.html#str.format">str.format()</a>.</p>
+                    <p><a href="https://docs.python.org/3/library/stdtypes.html#old-string-formatting"><strong>printf-style
+                                String Formatting</strong></a></p>
+                    <p>The old formatting operations invoked when strings are the left operand of the % operator are
+                        described in more detail here.</p>
+                    <h3>1.1.3. Lists</h3>
+                    <p>Python knows a number of <em>compound</em> data types, used to group together other values. The
+                        most versatile is the <em>list</em>, which can be written as a list of comma-separated values
+                        (items) between square brackets. Lists might contain items of different types, but usually the
+                        items all have the same type.</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares = [1, 4, 9, 16, 25]<br /><strong>&gt;&gt;&gt;
+                        </strong>squares<br />[1, 4, 9, 16, 25]<br /></p>
+                    <p>Like strings (and all other built-in <a
+                            href="https://docs.python.org/3/glossary.html#term-sequence">sequence</a> types), lists can
+                        be indexed and sliced:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares[0]  <em># indexing returns the
+                            item</em><br />1<br /><strong>&gt;&gt;&gt;
+                        </strong>squares[-1]<br />25<br /><strong>&gt;&gt;&gt; </strong>squares[-3:]  <em># slicing
+                            returns a new list</em><br />[9, 16, 25]<br /></p>
+                    <p>All slice operations return a new list containing the requested elements. This means that the
+                        following slice returns a <a
+                            href="https://docs.python.org/3/library/copy.html#shallow-vs-deep-copy">shallow copy</a> of
+                        the list:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares[:]<br />[1, 4, 9, 16, 25]<br /></p>
+                    <p>Lists also support operations like concatenation:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>squares + [36, 49, 64, 81, 100]<br />[1, 4, 9, 16, 25,
+                        36, 49, 64, 81, 100]<br /></p>
+                    <p>Unlike strings, which are <a
+                            href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>, lists are a <a
+                            href="https://docs.python.org/3/glossary.html#term-mutable">mutable</a> type, i.e. it is
+                        possible to change their content:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>cubes = [1, 8, 27, 65, 125]  <em># something&#x27;s
+                            wrong here</em><br /><strong>&gt;&gt;&gt; </strong>4 ** 3  <em># the cube of 4 is 64, not
+                            65!</em><br />64<br /><strong>&gt;&gt;&gt; </strong>cubes[3] = 64  <em># replace the wrong
+                            value</em><br /><strong>&gt;&gt;&gt; </strong>cubes<br />[1, 8, 27, 64, 125]<br /></p>
+                    <p>You can also add new items at the end of the list, by using the append() <em>method</em> (we will
+                        see more about methods later):</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>cubes.append(216)  <em># add the cube of
+                            6</em><br /><strong>&gt;&gt;&gt; </strong>cubes.append(7 ** 3)  <em># and the cube of
+                            7</em><br /><strong>&gt;&gt;&gt; </strong>cubes<br />[1, 8, 27, 64, 125, 216, 343]<br /></p>
+                    <p>Assignment to slices is also possible, and this can even change the size of the list or clear it
+                        entirely:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>letters = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;,
+                        &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>letters<br />[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;,
+                        &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27;]<br /><strong>&gt;&gt;&gt; </strong><em># replace
+                            some values</em><br /><strong>&gt;&gt;&gt; </strong>letters[2:5] = [&#x27;C&#x27;,
+                        &#x27;D&#x27;, &#x27;E&#x27;]<br /><strong>&gt;&gt;&gt; </strong>letters<br />[&#x27;a&#x27;,
+                        &#x27;b&#x27;, &#x27;C&#x27;, &#x27;D&#x27;, &#x27;E&#x27;, &#x27;f&#x27;,
+                        &#x27;g&#x27;]<br /><strong>&gt;&gt;&gt; </strong><em># now remove
+                            them</em><br /><strong>&gt;&gt;&gt; </strong>letters[2:5] = []<br /><strong>&gt;&gt;&gt;
+                        </strong>letters<br />[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;f&#x27;,
+                        &#x27;g&#x27;]<br /><strong>&gt;&gt;&gt; </strong><em># clear the list by replacing all the
+                            elements with an empty list</em><br /><strong>&gt;&gt;&gt; </strong>letters[:] =
+                        []<br /><strong>&gt;&gt;&gt; </strong>letters<br />[]<br /></p>
+                    <p>The built-in function <a href="https://docs.python.org/3/library/functions.html#len">len()</a>
+                        also applies to lists:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>letters = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;,
+                        &#x27;d&#x27;]<br /><strong>&gt;&gt;&gt; </strong>len(letters)<br />4<br /></p>
+                    <p>It is possible to nest lists (create lists containing other lists), for example:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a = [&#x27;a&#x27;, &#x27;b&#x27;,
+                        &#x27;c&#x27;]<br /><strong>&gt;&gt;&gt; </strong>n = [1, 2, 3]<br /><strong>&gt;&gt;&gt;
+                        </strong>x = [a, n]<br /><strong>&gt;&gt;&gt; </strong>x<br />[[&#x27;a&#x27;, &#x27;b&#x27;,
+                        &#x27;c&#x27;], [1, 2, 3]]<br /><strong>&gt;&gt;&gt; </strong>x[0]<br />[&#x27;a&#x27;,
+                        &#x27;b&#x27;, &#x27;c&#x27;]<br /><strong>&gt;&gt;&gt;
+                        </strong>x[0][1]<br />&#x27;b&#x27;<br /></p>
+                    <h2>1.2. First Steps Towards Programming</h2>
+                    <p>Of course, we can use Python for more complicated tasks than adding two and two together. For
+                        instance, we can write an initial sub-sequence of the <a
+                            href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci series</a> as follows:</p>
+                    <p>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong><em># Fibonacci series:</em><br /><strong>...
+                        </strong><em># the sum of two elements defines the next</em><br /><strong>... </strong>a, b = 0,
+                        1<br /><strong>&gt;&gt;&gt; while</strong> a &lt; 10:<br /><strong>... </strong>  
+                         print(a)<br /><strong>... </strong>    a, b = b,
+                        a+b<br /><strong>...</strong><br />0<br />1<br />1<br />2<br />3<br />5<br />8<br /></p>
+                    <p>This example introduces several new features.</p>
+                    <ul role="list">
+                        <li>The first line contains a <em>multiple assignment</em>: the variables a and b simultaneously
+                            get the new values 0 and 1. On the last line this is used again, demonstrating that the
+                            expressions on the right-hand side are all evaluated first before any of the assignments
+                            take place. The right-hand side expressions are evaluated from the left to the right.</li>
+                        <li>The <a href="https://docs.python.org/3/reference/compound_stmts.html#while">while</a> loop
+                            executes as long as the condition (here: a &lt; 10) remains true. In Python, like in C, any
+                            non-zero integer value is true; zero is false. The condition may also be a string or list
+                            value, in fact any sequence; anything with a non-zero length is true, empty sequences are
+                            false. The test used in the example is a simple comparison. The standard comparison
+                            operators are written the same as in C: &lt; (less than), &gt; (greater than), == (equal
+                            to), &lt;= (less than or equal to), &gt;= (greater than or equal to) and != (not equal to).
+                        </li>
+                        <li>The <em>body</em> of the loop is <em>indented</em>: indentation is Python’s way of grouping
+                            statements. At the interactive prompt, you have to type a tab or space(s) for each indented
+                            line. In practice you will prepare more complicated input for Python with a text editor; all
+                            decent text editors have an auto-indent facility. When a compound statement is entered
+                            interactively, it must be followed by a blank line to indicate completion (since the parser
+                            cannot guess when you have typed the last line). Note that each line within a basic block
+                            must be indented by the same amount.</li>
+                        <li>The <a href="https://docs.python.org/3/library/functions.html#print">print()</a> function
+                            writes the value of the argument(s) it is given. It differs from just writing the expression
+                            you want to write (as we did earlier in the calculator examples) in the way it handles
+                            multiple arguments, floating point quantities, and strings. Strings are printed without
+                            quotes, and a space is inserted between items, so you can format things nicely, like this:
+                        </li>
+                        <li>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>i = 256*256<br /><strong>&gt;&gt;&gt;
+                            </strong>print(&#x27;The value of i is&#x27;, i)<br />The value of i is 65536<br /></li>
+                        <li>The keyword argument <em>end</em> can be used to avoid the newline after the output, or end
+                            the output with a different string:</li>
+                        <li>&gt;&gt;&gt;<strong>&gt;&gt;&gt; </strong>a, b = 0, 1<br /><strong>&gt;&gt;&gt;
+                                while</strong> a &lt; 1000:<br /><strong>... </strong>    print(a,
+                            end=&#x27;,&#x27;)<br /><strong>... </strong>    a, b = b,
+                            a+b<br /><strong>...</strong><br />0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,</li>
+                    </ul>
+                    <p>‍</p>
+                </div>
+            </div>
+            <div class="button-wrapper"><a href="/Files/index.html" class="button w-button">← View all posts</a></div>
+        </div>
+    </div>
+    <footer class="footer wf-section">
+        <div class="w-container">
+            <div>
+                <div class="w-row">
+                    <div class="w-col w-col-8"></div>
+                    <div class="align-content-right w-col w-col-4"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=62d3db6e04d0a360c05d6aff"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="intro.js" type="text/javascript"></script>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+</body>
+
+</html>
